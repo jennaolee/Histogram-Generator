@@ -1,0 +1,115 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f0ed;
+    color: #222c41;
+}
+
+header {
+    padding: 5px 20px 20px;
+}
+
+input::file-selector-button {
+    font-weight: bold;
+    padding: 0.5em;
+    border-color:  #222c41;
+    background-color: #efb846;
+}
+
+.grade-input {
+    width: 3.75rem;
+    padding: 5px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+label {
+    display: inline-block;
+    width: 50px;
+    text-align: left;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 10px 20px;
+}
+
+.flex-item {
+    background-color: #ffffff;
+    padding: 0px 20px 10px;
+    margin: 10px; 
+    border: #222c41 solid;
+}
+
+.flex-item-left {
+    flex: 10;
+}
+
+.flex-item-right {
+    flex: 90;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-item-child-upper {
+    flex: 20;
+
+}
+
+.flex-item-child-lower {
+    flex: 80;
+
+}
+
+input[type="text"] {
+    font-family: 'Roboto', sans-serif;
+    border: #222c41 solid;
+}
+
+h4 {
+    display: inline-block;
+}
+
+.jstd {
+    width: 15rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.htmltd {
+    width: 4rem;
+}
+
+canvas {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 800px;
+    border: #222c41 solid;
+}
+
+.graph_label {
+    margin: 10px 90px;
+    text-align: center;
+}
+.graph_label > p {
+    display: inline;
+    text-align: center;
+    padding: 0px 1.65rem;
+}
+
+.graph_label_top {
+    margin: 10px 85px;
+    text-align: center;
+}
+
+.graph_label_top > p {
+    display: inline;
+    text-align: center;
+    padding: 0px 1.8rem;
+    font-size: medium;
+}
+
+#errorMessage {
+    display: inline;
+}
+

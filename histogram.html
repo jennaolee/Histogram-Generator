@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Histogram Generator</title>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/histogram.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  <!-- JavaScript -->
+  <script src="javascript/calculate.js" type="text/javascript" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>HISTOGRAM GENERATOR</h1>
+        <input type="file" id="dataFile" onChange="stats(this)" accept=".csv">
+        <p id="errorMessage"></p>
+      </header>
+
+    <main class="flex-container">
+        <section class="flex-item flex-item-left">
+          <h3>Lower Bounds</h3>
+          
+          <form>
+            <label for="Max">Max</label>
+            <input type="text" class="grade-input" id="Max" name="Max" value="100.00" onChange="stats(dataFile)">
+
+            <label for="A+">A+</label>
+            <input type="text" class="grade-input" id="A+" name="A+" value="95.00" onChange="stats(dataFile)">
+            
+            <label for="A">A</label>
+            <input type="text" class="grade-input" id="A" name="A" value="90.00" onChange="stats(dataFile)">
+            
+            <label for="A-">A-</label>
+            <input type="text" class="grade-input" id="A-" name="A-" value="85.00" onChange="stats(dataFile)">
+            
+            <label for="B+">B+</label>
+            <input type="text" class="grade-input" id="B+" name="B+" value="80.00" onChange="stats(dataFile)">
+            
+            <label for="B">B</label>
+            <input type="text" class="grade-input" id="B" name="B" value="75.00" onChange="stats(dataFile)">
+            
+            <label for="B-">B-</label>
+            <input type="text" class="grade-input" id="B-" name="B-" value="70.00" onChange="stats(dataFile)">
+            
+            <label for="C+">C+</label>
+            <input type="text" class="grade-input" id="C+" name="C+" value="65.00" onChange="stats(dataFile)">
+            
+            <label for="C">C</label>
+            <input type="text" class="grade-input" id="C" name="C" value="60.00" onChange="stats(dataFile)">
+            
+            <label for="C-">C-</label>
+            <input type="text" class="grade-input" id="C-" name="C-" value="55.00" onChange="stats(dataFile)">
+
+            <label for="D">D</label>
+            <input type="text" class="grade-input" id="D" name="D" value="50.00" onChange="stats(dataFile)">
+
+            <label for="F">F</label>
+            <input type="text" class="grade-input" id="F" name="F" value="0.00" onChange="stats(dataFile)">
+          </form>
+
+        </section>
+
+        <section class="flex-item-right">
+            <section class="flex-item flex-item-child-upper">
+              <h3>Stats</h3>
+              <table>
+                  <tr>
+                      <td class="htmltd"><h4>Highest</h4></td>
+                      <td class="jstd"><p id="highestGrade"></p></td>
+
+                      <td class="htmltd"><h4>Lowest</h4></td>
+                      <td class="jstd"><p id="lowestGrade"></p></td>
+                      
+                      <td class="htmltd"><h4>Mean</h4></td>
+                      <td class="jstd"><p id="meanGrade"></p></td>
+                      
+                      <td class="htmltd"><h4>Median</h4></td>
+                      <td class="jstd"><p id="medianGrade"></p></td>
+                  </tr>
+              </table>
+            </section>
+
+            <section class=" flex-item flex-item-child-lower">
+              <h3>Histogram</h3>
+
+              <section class="graph_label_top">
+                <p id="Aplus-students"></p>
+                <p id="A-students"></p>
+                <p id="Aminus-students"></p>
+                <p id="Bplus-students"></p>
+                <p id="B-students"></p>
+                <p id="Bminus-students"></p>
+                <p id="Cplus-students"></p>
+                <p id="C-students"></p>
+                <p id="Cminus-students"></p>
+                <p id="D-students"></p>
+                <p id="F-students"></p>
+              </section>
+
+              <canvas id="myCanvas"></canvas>
+              
+              <section class="graph_label">
+                <p>A+</p>
+                <p>A</p>
+                <p>A-</p>
+                <p>B+</p>
+                <p>B</p>
+                <p>B-</p>
+                <p>C+</p>
+                <p>C</p>
+                <p>C-</p>
+                <p>D</p>
+                <p>F</p>
+              </section>
+
+            </section>
+        </section>
+    </main>    
+</body>
+</html>
